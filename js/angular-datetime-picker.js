@@ -62,7 +62,7 @@ function datetimepickerDirective($parse, $timeout, $filter) {
 
             $scope.opened = false;
 
-            var pm = $scope.value.getHours() > 12;
+            var pm = $scope.value.getHours() >= 12;
 
             $scope.onOpenClick = function() {
                 $scope.opened = !$scope.opened;
@@ -81,7 +81,7 @@ function datetimepickerDirective($parse, $timeout, $filter) {
 
             $scope.__defineGetter__('pm', function() {
                 var hours = $scope.value.getHours();
-                return hours > 12;
+                return hours >= 12;
             });
 
             $scope.__defineSetter__('hour', function(hours) {

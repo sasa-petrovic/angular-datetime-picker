@@ -1,25 +1,30 @@
 <div>
     <input type="text" datepicker-popup="yyyy-MM-dd" ng-model="value" is-open="opened" ng-required="true" close-text="Close" ng-click="onOpenClick()" />
     <div ng-if="meridians">
-        <select nya-bs-select ng-model="hour" ng-options="hour.value as hour.formatted for hour in meridian_hours">
-            <option value="">Select one</option>
-        </select>
-    </div>
-    <div ng-if="!meridians">
-        <select nya-bs-select ng-model="hour" ng-options="hour.value as hour.formatted for hour in hours">
-            <option value="">Select one</option>
-        </select>
-        <ol class="nya-bs-select" ng-model="myModel">
-            <li nya-bs-option="hour in hours">
+        <ol class="nya-bs-select" ng-model="$parent.hour">
+            <li nya-bs-option="h in meridian_hours" value="h.value">
                 <a>
-            {{hour.formatted}}
-        </a>
+              {{h.formatted}}
+                </a>
             </li>
         </ol>
     </div>
-    <select nya-bs-select ng-model="minute" ng-options="minute.value as minute.formatted for minute in minutes">
-        <option value="">Select one</option>
-    </select>
+    <div ng-if="!meridians">
+        <ol class="nya-bs-select" ng-model="$parent.hour">
+            <li nya-bs-option="h in hours" value="h.value">
+                <a>
+              {{h.formatted}}
+                </a>
+            </li>
+        </ol>
+    </div>
+    <ol class="nya-bs-select" ng-model="minute">
+        <li nya-bs-option="m in minutes" value="m.value">
+            <a>
+              {{m.formatted}}
+                </a>
+        </li>
+    </ol>
     <div ng-if="!meridians">
         <label>
             <input type="radio" ng-model="pm" ng-value="false"> AM
