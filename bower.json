@@ -1,0 +1,27 @@
+{
+  "name": "angular-datetime-picker",
+  "version": "0.0.1",
+  "homepage": "https://github.com/brndusic/angular-datetime-picker",
+  "authors": [
+    "Mladen Brndusic <brndusic@gmail.com>"
+  ],
+  "description": "Datetimepicker directive combined from bootstra datepicker and bootstrap select picker",
+  "keywords": [
+    "datetime",
+    "picker"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1",
+    "angular-bootstrap": "~0.13.0",
+    "bootstrap": "~3.3.5",
+    "nya-bootstrap-select": "~2.0.10"
+  }
+}

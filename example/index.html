@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>angular-datetime-picker</title>
+    <meta name="description" content="angular-datetime-picker">
+    <meta name="author" content="Brndusic">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/nya-bootstrap-select/dist/css/nya-bs-select.min.css">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/nya-bootstrap-select/dist/js/nya-bs-select.min.js"></script>
+
+    <script src="../js/angular-datetime-picker.js"></script>
+    <script src="./app.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="Ctrl">
+    <div class="container">
+        <div class="row">
+            <div datetimepicker data-ng-model="dateFrom"></div>
+        </div>
+        <div class="row">
+            <div datetimepicker data-ng-model="dateFrom" dtp-meridians="true" dtp-minutes-step="15"></div>
+        </div>
+        <div class="row">
+            {{dateFrom|date:'mediumTime'}}</div>
+    </div>
+</body>
+
+</html>
