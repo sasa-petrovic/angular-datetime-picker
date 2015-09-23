@@ -15,6 +15,7 @@ function datetimepickerSettings() {
         if (i >= 0 && i <= 11) {
             hour = "" + i;
             hour = pad.substring(0, pad.length - hour.length) + hour;
+            hour = hour === "00" ? "12" : hour;
             this.hours.push({
                 value: i,
                 formatted: hour
