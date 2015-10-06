@@ -30,6 +30,8 @@ function datetimepickerSettings() {
         });
     }
 
+    var tmp = this.hours.shift();
+    this.hours.push(tmp);
 
     this.generateMinutes = function(minutes_step) {
         var minutes = new Array(),
@@ -44,9 +46,6 @@ function datetimepickerSettings() {
         }
         return minutes;
     };
-
-
-
 
     this.$get = function() {
         return {
