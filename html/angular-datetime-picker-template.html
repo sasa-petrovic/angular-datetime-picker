@@ -1,5 +1,6 @@
 <div>
-    <input type="text" datepicker-popup="yyyy-MM-dd" ng-model="value" is-open="opened" ng-required="true" close-text="Close" ng-click="onOpenClick()" />
+    <input type="text" uib-datepicker-popup="yyyy-MM-dd" ng-model="value" is-open="opened" show-weeks="false"
+           ng-required="true" close-text="Close" ng-click="onOpenClick()" />
     <div ng-if="meridians">
         <ol class="nya-bs-select" ng-model="$parent.hour">
             <li nya-bs-option="h in meridian_hours" value="h.value">

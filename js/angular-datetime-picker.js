@@ -64,10 +64,10 @@ function datetimepickerDirective($parse, $timeout, $filter, settings) {
         templateUrl: settings.templateUrl,
         scope: {
             value: '=ngModel',
-            meridians: '=dtpMeridians',
-            hours: '=dtpHours',
-            meridian_hours: '=dtpMeridianHours',
-            minutes_step: '=dtpMinutesStep'
+            meridians: '=?dtpMeridians',
+            hours: '=?dtpHours',
+            meridian_hours: '=?dtpMeridianHours',
+            minutes_step: '=?dtpMinutesStep'
         },
         controller: function($scope, $element, $attrs, $transclude) {
             $scope.value = $scope.value instanceof Date ? $scope.value : new Date();
